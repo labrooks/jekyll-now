@@ -1,7 +1,7 @@
 ---
 published: false
 ---
-## Single Sourcing Static Data Using T4 Templates
+## Single Sourcing Static Data Using T4 Text Templates
 
 Consider a .NET application which needs to convert between [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1) numeric and alpha-3 codes in a variety of places and has an underlying SQL database. This data is almost certainly going to be represented in the database somehow - lets say this is represented in the table below: 
 
