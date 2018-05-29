@@ -34,13 +34,73 @@ My favored solution is to use a code-generation tool prior to the compilation of
 
 ### Defining The Data Model
 
-The easiest way to generate appropriate code is to provide enough information to generate a C# model
+The easiest way to generate appropriate code is to provide enough information to generate a C# model: **TableDefinitions.xml**
+
+```
+<DBTable Name="Country" KeyColumn="NumericCode", KeyType="string", ConnectionString="INSERT CONN STRING HERE">
+	<DBColumn Name="Alpha3Code" Type="string"/>
+    <DBColumn Name="EnglishShortName" Type="string"/>
+</DBTable>
+```
+
+In code we then serialize that into the following model:
+**DBTableDefinition.cs**
+
+```
+public class DBColumn
+{
+	public string ColumnName { get; set; }
+    public string ColumnType { get; set; }
+}
+
+public class DBTableDefinition
+{
+	public string TableName { get; set; }
+    public string KeyColumn { get; set; }
+    public string KeyType { get; set; }
+    public List<DBColumn> Columns { get; set; }
+}
+```
+
+With these models constructed, we can refer to them via a T4 template to generate a C# model:
+**ReferenceData.tt**
+```
+INSERT TEMPLATE CODE HERE
+```
+
+Right clicking on the template and selecting 'Run Custom Tool' generates the following Model:
+```
+public class Country
+{
+    public string Alpha3Code { get; set; }
+    public string EnglishShortName { get; set; }
+}
+```
 
 ### Extracting Data and Dictionary Generation
 
+Now we have a model, we need to construct a dictionary to map between the desired key column content and the contents of the other columns. To do this, first we must write code which will generate the text for inserting a row into a `Dictionary<keyType, tableName>` where both `keyType` and `tableName` are specified in ReferenceData.xml.
+
+```
+ROW CODE HERE
+```
+
+Now that we can define a rows we need to insert into a dictionary, all we need to do is wrap that in a static class which can house the output dictionary.
+
+```
+TEMPLATE CODE HERE
+```
+
+Running the T4 template tool again via visual studio yields the following code:
+```
+```
+
+Excellent. Now the database is the single source of truth, but we have an easy way to reflect that in our application code that doesn't involve managing DB connections or caches. This approach can be used for more than just dictionaries - you can generate lists, enums, and any other static data you might want, you'll just have to bend the xml definitions and code generation components appopriately!
+
+
 ### Further Learning
+- I highly recommend [Dustin Davis' fantastic Pluralsight course on T4 templates](https://www.pluralsight.com/courses/t4-templates)
+- [Microsoft's documentation on T4 templates](https://msdn.microsoft.com/en-us/library/bb126445.aspx)
 
-### Acknowledgement
 
-
-
+### Acknowledgements
