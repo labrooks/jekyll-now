@@ -1,6 +1,6 @@
 ---
 layout: post
-title: You're up and running!
+title: The Moral Obligation of Management
 published: true
 ---
 # The Moral Obligation of Management
