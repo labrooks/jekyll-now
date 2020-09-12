@@ -1,5 +1,7 @@
 ---
-published: false
+layout: post
+title: You're up and running!
+published: true
 ---
 # The Moral Obligation of Management
 
