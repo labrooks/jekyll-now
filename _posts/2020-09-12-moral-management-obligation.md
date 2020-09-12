@@ -3,8 +3,6 @@ layout: post
 title: The Moral Obligation of Management
 published: true
 ---
-# The Moral Obligation of Management
-
 While reading "When Breath Becomes Air" by Paul Kalanithi, I was particularly struck by a passage where the author realizes that being excellent at your job in the high-stakes world of neurosurgery is a moral responsibility.
 
 > The pain of failure had led me to understand that technical excellence was a moral requirement. Good intentions were not enough, not when so much depended on my skills, when the difference between tragedy and triumph was defined by one or two millimeters.
