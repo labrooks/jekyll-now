@@ -17,7 +17,7 @@ With the impact of management skills firmly in mind, there are three broad ways 
 - Improving emotional intelligence
 - Gaining additional knowledge of line management skills and techniques including but not limited to performance reviews, 1-1s, coaching, and mentoring
 - Effectively advocating for initiatives or strategies which would support your team's well-being in broader discussions (department-wide, organization-wide)
-- 
+
 This article isn't about how to do any of those things, but I'd suggest if you take your team's well-being seriously, you should invest in self-improvement in each of those categories regularly. 
 
 Do you think managers have a *moral* obligation be excellent at what they do? I think so, although I'm willing to admit I can take my job too seriously - on the other hand, I'd much rather err on the side of caution and care too much about my craft rather than caring too little. I'm interested to hear my network's thoughts and opinions on the matter. 
